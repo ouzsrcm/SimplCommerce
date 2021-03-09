@@ -177,6 +177,7 @@ namespace SimplCommerce.Module.WishList.Areas.WishList.Controllers
         [HttpPost("wishlist/add-item")]
         public async Task<IActionResult> AddItem([FromBody] AddToWishList model)
         {
+            ///TODO: catch model errors
             if (ModelState.IsValid)
             {
                 var user = await _workContext.GetCurrentUser();
